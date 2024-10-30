@@ -3,10 +3,10 @@
 int main()
 {
 
-	FILE*file1 = fopen("file.txt", "r");
-	FILE*file2 = fopen("copia.txt", "w");
+	FILE*File_in = fopen("file_in.txt", "r");
+	FILE*File_out = fopen("file_out.txt", "w");
 
-	if(file1 == NULL || file2 == NULL)
+	if(File_in == NULL || File_out == NULL)
 	{
 		printf("il file non puo essere aperto");
 	}
@@ -16,7 +16,7 @@ int main()
 	int contP = 0;
 	
 	char buffer[100];
-	while (fgets(buffer, 100, file1) != NULL) 
+	while (fgets(buffer, 100, File_in) != NULL) 
 	{
 		
 		for(int i = 0; buffer[i] != '\0'; i++)
@@ -44,8 +44,8 @@ int main()
 	printf("le righe sono:%d\n", contR);
 
 
-	fclose(file1);
-	fclose(file2);
+	fclose(File_in);
+	fclose(File_out);
 
 	return 0;
 }
