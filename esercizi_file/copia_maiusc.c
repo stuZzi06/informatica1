@@ -6,8 +6,8 @@ int main()
     FILE* File_out = fopen("file_out.txt", "w");
 
     if (File_in == NULL || File_out == NULL)
-    {
-        printf("il file non puo essere aperto");
+    {           
+        printf("il file non puo essere aperto");        //da errore se il file non viene aperto
     }
 
     char riga[100];
@@ -16,7 +16,7 @@ int main()
         for (int i = 0; i < 100; i++)
         {
             if (riga[i] >= 'a' && riga[i] <= 'z')
-            {
+            {                                           //trasforma in maiuscolo
                 riga[i] = riga[i] - 32;
             }
         }
