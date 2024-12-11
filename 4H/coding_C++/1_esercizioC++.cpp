@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -13,10 +14,12 @@ class Rettangolo
         {
             altezza = a;
         }
+
         void setBase(double b)
         {
             base = b;
         }
+
         double calcolaPerimetro()
         {
             double perimetro;
@@ -26,6 +29,7 @@ class Rettangolo
             return perimetro;
 
         }
+
         double calcolaArea()
         {
             double area;
@@ -35,12 +39,23 @@ class Rettangolo
             return area;
 
         }
+
+        double calcoloDiagonale()
+        {
+            double diagonale;
+
+            diagonale = sqrt((base*base)+(altezza*altezza));
+
+            return diagonale;
+        }
+
         void stampa()
         {
             cout << "Base: " << base << endl;
             cout << "Altezza: " << altezza << endl; 
             cout << "Perimetro: " << calcolaPerimetro() << endl; 
             cout << "Area: " << calcolaArea() << endl;
+            cout << "diagonale: " << calcoloDiagonale() << endl;
         }
 };
 
