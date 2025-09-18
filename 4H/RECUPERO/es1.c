@@ -56,6 +56,6 @@ int main()
 
 
     //topolino
-     strcpy = topolino.cognome = "Rossi";
+    //strcpy = topolino.cognome = "Rossi";
 
 }
